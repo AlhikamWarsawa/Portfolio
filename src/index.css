@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Martian Mono", monospace;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.loader div:first-child {
+  animation-delay: 0.1s;
+}
+
+.loader div:first-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader div:first-child(3) {
+  animation-delay: 0.3s;
+}
+
+.custom-size {
+  @apply md:w-[calc(100vw-2.5rem)] md:h-[calc(100vh-2.5rem)] w-[calc(100vw-2rem)] h-[calc(100vh-2rem)];
+}
+
+input[type="checkbox"]:checked + label {
+  color: white;
+}
+
+input[type="checkbox"]:hover {
+  outline: 1px solid #1e3448;
+}
+
+.react-syntax-highlighter-line-number {
+  @apply text-[#607B96];
+}
+
+code .token {
+  @apply text-[#607B96] !important;
+}
+
+.efofCE {
+  @apply bg-transparent p-0 !important;
+}
+
+.efofCE span {
+  @apply bg-transparent !important;
+}
+
+.sc-bcXHqe.kBPKLM {
+  @apply hidden !important;
+}
+
+.loHkWQ {
+  @apply bg-transparent p-0 !important;
+}
+
+.loHkWQ span {
+  @apply bg-transparent !important;
+}
+.sc-bcXHqe.iCXprV {
+  @apply hidden !important;
+}
