@@ -185,6 +185,7 @@ function Certification({closeCertification}) {
 
 1. Git: Pemula sampai Mahir
    Issued by       : Udemy
+   Issued          : Jan 2024
    Credential ID   : UC-1139d7a2-56fc-4394-8ac0-daa1b0eb72fe
 
 2. Belajar Dasar AI
@@ -265,6 +266,7 @@ int main() {
     /* 1. Git: Pemula sampai Mahir */
     printf("1. Git: Pemula sampai Mahir\\n");
     printf("   Issued by       : Udemy\\n");
+    printf("   Issued          : Jan 2024\\n");
     printf("   Credential ID   : UC-1139d7a2-56fc-4394-8ac0-daa1b0eb72fe\\n\\n");
 
     /* 2. Belajar Dasar AI */
