@@ -9,6 +9,8 @@ import { DiGitBranch } from "@react-icons/all-files/di/DiGitBranch";
 import { AiOutlineFolderOpen } from "@react-icons/all-files/ai/AiOutlineFolderOpen";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { FiCheck } from 'react-icons/fi';
+import {BsChevronDown} from "react-icons/bs";
 
 export default function Layout({ children, setIsNavbar, isNavbar }) {
   // For toggle navbar on mobile
@@ -25,6 +27,32 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
       winHeight: window.innerHeight,
     });
   };
+
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  const [showLintingMenu, setShowLintingMenu] = useState(false);
+  const [lintingStatus, setLintingStatus] = useState('OK');
+
+  const toggleLintingMenu = () => {
+    setShowLintingMenu(!showLintingMenu);
+  };
+
+  const lintingOptions = [
+    { label: 'Run linter', action: () => setLintingStatus('Running...') },
+    { label: 'Show errors', action: () => console.log('Showing errors') },
+    { label: 'Fix auto-fixable', action: () => console.log('Fixing issues') },
+  ];
+
 
   useEffect(() => {
     window.addEventListener("resize", detectSize);
@@ -234,16 +262,42 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
               </div>
             </div>
             <div className="flex items-center justify-end gap-x-2">
-              <p className="font-light text-sm">UTF-8</p>
+              <p className="font-light text-sm">
+                {currentTime.toLocaleTimeString('id-ID', {
+                  hour12: false,
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  second: '2-digit',
+                }).replace(/\./g, ':')} (UTC+7)
+              </p>
 
-              <div
-                  className="flex items-center bg-[#1f2328] h-[30px]"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Follow me on github"
-              >
-                <p className="px-2 font-light text-sm">ruff_lsp</p>
-                <BsGearFill className="w-[30px] h-[30px] p-2 bg-[#69b373] text-[#d0d3d8]" />
+              <div className="relative">
+                <button
+                    className="flex items-center bg-[#1f2328] h-[30px] hover:bg-[#2a2e35] transition-colors"
+                    onClick={toggleLintingMenu}
+                >
+                  <p className="px-2 font-light text-sm">ruff_lsp: {lintingStatus}</p>
+                  <BsGearFill className="w-[30px] h-[30px] p-2 bg-[#69b373] text-[#d0d3d8]"/>
+                  <BsChevronDown className="ml-1 text-xs"/>
+                </button>
+
+                {showLintingMenu && (
+                    <div className="absolute right-0 mt-1 w-48 bg-[#1f2328] border border-[#2a2e35] rounded shadow-lg">
+                      {lintingOptions.map((option, index) => (
+                          <button
+                              key={index}
+                              className="w-full text-left px-4 py-2 hover:bg-[#2a2e35] transition-colors flex items-center"
+                              onClick={() => {
+                                option.action();
+                                setShowLintingMenu(false);
+                              }}
+                          >
+                            <FiCheck className="mr-2 invisible"/>
+                            {option.label}
+                          </button>
+                      ))}
+                    </div>
+                )}
               </div>
               <div
                   className="flex items-center bg-[#1f2328] h-[30px]"
@@ -252,7 +306,7 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                   aria-label="Follow me on github"
               >
                 <p className="px-2 font-light text-sm">Alhikam-site</p>
-                <AiOutlineFolderOpen className="w-[30px] h-[30px] p-2 bg-[#cbced3] text-[#1f2328]" />
+                <AiOutlineFolderOpen className="w-[30px] h-[30px] p-2 bg-[#cbced3] text-[#1f2328]"/>
               </div>
               <a
                   className="flex items-center bg-[#1f2328] h-[30px] hover:text-white transition-colors group"
@@ -262,7 +316,8 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                   aria-label="Follow me on github"
               >
                 <p className="px-2 font-light text-sm">AlhikamWarsawa</p>
-                <AiOutlineGithub className="w-[30px] h-[30px] p-2 bg-[#c296eb] text-[#d0d3d8] group-hover:text-white transition-colors" />
+                <AiOutlineGithub
+                    className="w-[30px] h-[30px] p-2 bg-[#c296eb] text-[#d0d3d8] group-hover:text-white transition-colors"/>
               </a>
             </div>
           </footer>
