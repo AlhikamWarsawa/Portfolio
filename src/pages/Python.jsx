@@ -106,7 +106,7 @@ const Python = ({ scoreSnake = () => {} }) => {
                 />
                 {gameOver && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-[#43D9AD] text-2xl">
-                        UNDEFINED!
+                        GAME OVE!
                     </div>
                 )}
                 {!hideStartBtn && (
