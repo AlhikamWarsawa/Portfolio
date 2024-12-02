@@ -9,6 +9,7 @@ import { SiAssemblyscript } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/ProjectData.json";
+import { SiLaravel } from "react-icons/si";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");
@@ -61,58 +62,58 @@ export default function Projects() {
               <div className="flex items-center gap-6 ">
                 <button
                     className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Python" ? "text-white" : "text-[#607B96]"
+                        filter === "Laravel" ? "text-white" : "text-[#607B96]"
                     }`}
-                    onClick={() => setFilter("Python")}
+                    onClick={() => setFilter("Laravel")}
                 >
-                  <SiPython />
-                  <span>Python</span>
+                  <SiLaravel />
+                  <span>Laravel</span>
                 </button>
               </div>
-              <div className="flex items-center gap-6">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "C" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("C")}
-                >
-                  <SiC />
-                  <span>C</span>
-                </button>
-              </div>
-              <div className="flex items-center gap-6">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Zig" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("Zig")}
-                >
-                  <SiZig />
-                  <span>Zig</span>
-                </button>
-              </div>
-              <div className="flex items-center gap-6">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Nim" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("Nim")}
-                >
-                  <FaCrown />
-                  <span>Nim</span>
-                </button>
-              </div>
-              <div className="flex items-center gap-6">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Assembly" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("Assembly")}
-                >
-                  <SiAssemblyscript />
-                  <span>Assembly</span>
-                </button>
-              </div>
+              {/*<div className="flex items-center gap-6">*/}
+              {/*  <button*/}
+              {/*      className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${*/}
+              {/*          filter === "C" ? "text-white" : "text-[#607B96]"*/}
+              {/*      }`}*/}
+              {/*      onClick={() => setFilter("C")}*/}
+              {/*  >*/}
+              {/*    <SiC />*/}
+              {/*    <span>C</span>*/}
+              {/*  </button>*/}
+              {/*</div>*/}
+              {/*<div className="flex items-center gap-6">*/}
+              {/*  <button*/}
+              {/*      className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${*/}
+              {/*          filter === "Zig" ? "text-white" : "text-[#607B96]"*/}
+              {/*      }`}*/}
+              {/*      onClick={() => setFilter("Zig")}*/}
+              {/*  >*/}
+              {/*    <SiZig />*/}
+              {/*    <span>Zig</span>*/}
+              {/*  </button>*/}
+              {/*</div>*/}
+              {/*<div className="flex items-center gap-6">*/}
+              {/*  <button*/}
+              {/*      className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${*/}
+              {/*          filter === "Nim" ? "text-white" : "text-[#607B96]"*/}
+              {/*      }`}*/}
+              {/*      onClick={() => setFilter("Nim")}*/}
+              {/*  >*/}
+              {/*    <FaCrown />*/}
+              {/*    <span>Nim</span>*/}
+              {/*  </button>*/}
+              {/*</div>*/}
+              {/*<div className="flex items-center gap-6">*/}
+              {/*  <button*/}
+              {/*      className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${*/}
+              {/*          filter === "Assembly" ? "text-white" : "text-[#607B96]"*/}
+              {/*      }`}*/}
+              {/*      onClick={() => setFilter("Assembly")}*/}
+              {/*  >*/}
+              {/*    <SiAssemblyscript />*/}
+              {/*    <span>Assembly</span>*/}
+              {/*  </button>*/}
+              {/*</div>*/}
 
             </Transition>
           </div>
@@ -151,8 +152,8 @@ const Card = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function generateIcon(value) {
-    if (value.includes("Python")) {
-      return <SiPython />;
+    if (value.includes("Laravel")) {
+      return <SiLaravel />;
     }
     if (value.includes("C")) {
       return <SiC />;

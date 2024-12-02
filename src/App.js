@@ -5,6 +5,7 @@ import ContactMe from "./pages/ContactMe";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Projects from "./pages/Projects";
+import Python from './pages/Python';
 
 export default function App() {
   const [isNavbar, setIsNavbar] = useState("/");
@@ -18,6 +19,8 @@ export default function App() {
       return <Projects />;
     } else if (value === "contact-me") {
       return <ContactMe />;
+    } else if (value === "python") {
+      return <Python />;
     }
   }
 

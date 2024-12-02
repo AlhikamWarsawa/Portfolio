@@ -115,7 +115,6 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                     _projects
                   </button>
                 </div>
-
                 <button
                     id="border-b"
                     className={`px-5 py-4 border-l border-l-[#101419] border-b-2 h-full transition-all hover:text-white ${isNavbar === "contact-me"
@@ -128,6 +127,18 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                 >
                   _contact-me
                 </button>
+                <button
+                    id="border-b"
+                    className={`px-5 py-4 border-l border-l-[#101419] border-b-2 h-full transition-all hover:text-white ${isNavbar === "python"
+                        ? "border-b-2 border-[#FEA55F] text-white"
+                        : "border-b-transparent"
+                    }`}
+                    onClick={() => {
+                      setIsNavbar("python");
+                    }}
+                >
+                  _python
+                </button>
               </nav>
             </div>
 
@@ -138,7 +149,7 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                         className="justify-self-center text-xl block lg:hidden"
                         onClick={() => setNavbar((setNavbar) => !setNavbar)}
                     >
-                      <AiOutlineClose />
+                      <AiOutlineClose/>
                     </button>
                 )
                 : (
@@ -210,7 +221,20 @@ export default function Layout({ children, setIsNavbar, isNavbar }) {
                         >
                           _contact-me
                         </button>
+                        <button
+                            className={`px-5 py-4 border-b  transition-all w-full text-left ${isNavbar === "python"
+                                ? "border-b-2 border-[#FEA55F] text-white"
+                                : "border-b-[#101419]"
+                            }`}
+                            onClick={() => {
+                              setIsNavbar("python");
+                              setNavbar(false);
+                            }}
+                        >
+                          _python
+                        </button>
                       </div>
+
 
                       <footer className="block lg:hidden">
                         <div className="grid grid-cols-12 px-2 text-[#607B96] border-t border-[#101419]">

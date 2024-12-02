@@ -71,7 +71,7 @@ Hobby: Coding, Ngoding, Nunggu Weekend
 Languages Known: Rust, C, Python, JavaScript, PHP, SQL
 Currently Learning:
   - Languages: Python, Rust, C
-  - Other: Calculus, Machine Learning
+  - Other: Trigonometry, Rust, Laravel, Docker
 Volunteering since 2024, working as Technical Writer Write articles about web development on Medium. Focus on website development topics. Make simple tutorials for beginners and learn to optimize websites. Actively interact with the developer community and learn from their feedback.
 `;
 
@@ -143,7 +143,7 @@ profile = Profile(
     languages=["Rust", "C", "Python", "JavaScript", "PHP", "SQL"],
     currently_learning={
         "Languages": ["Python", "Rust", "C"],
-        "Other": ["Calculus", "Machine Learning"]
+        "Other": ["Trigonometry", "Rust", "Laravel", "Docker"]
     },
 )
 

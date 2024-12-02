@@ -30,16 +30,28 @@ export default function Home() {
                     }}
                     onInit={(typewriter) => {
                       typewriter
-                          .typeString(`PHP: Programmer Harus Python`)
+                          .typeString(`Ngoding serasa main puzzle, tapi kalau salah, mesin langsung ngambek.`)
                           .pauseFor(1000)
                           .deleteAll()
-                          .typeString(`Web Dev: Bangun website. ML Engineer: Bangun masa depan.`)
+
+                          .typeString(`Si perfeksionis yang suka kontrol, bahkan pixel pun nggak bisa lolos.`)
                           .pauseFor(500)
                           .deleteAll()
-                          .typeString(`Web Dev: Selesai landing page. ML Engineer: Selesai prediksi`)
+
+                          .typeString(`Sok tegas soal keamanan, tapi diam-diam suka bikin programmer tenang.`)
                           .pauseFor(500)
                           .deleteAll()
-                          .typeString(`Web Dev: Buat form. ML Engineer: Buat AI.`)
+
+                          .typeString(`Kode sesantai ngobrol, hasilnya kayak nyewa pekerja outsourcing.`)
+                          .pauseFor(500)
+                          .deleteAll()
+
+                          .typeString(`Si lincah yang bisa di mana saja, tapi sering bikin bug jadi bagian keluarga.`)
+                          .pauseFor(500)
+                          .deleteAll()
+
+                          .typeString(`Si veteran web yang masih eksis, walau kadang kode-nya kayak teka-teki silang.`)
+                          .pauseFor(500)
                           .start();
                     }}
                 />

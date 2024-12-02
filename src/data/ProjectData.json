@@ -1,10 +1,10 @@
 [
   {
-    "title": "Test",
-    "description": "Test",
-    "technology": "Assembly",
+    "title": "Management Library",
+    "description": "Uji Sertifikasi Management Library",
+    "technology": "Laravel",
     "visibleProject": "Public",
-    "image": "../projects/download.jpeg",
-    "link": "#wip"
+    "image": "../projects/sertikom3.png",
+    "link": "https://github.com/AlhikamWarsawa/Sertikom3"
   }
 ]
