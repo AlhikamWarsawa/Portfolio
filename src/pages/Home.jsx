@@ -76,6 +76,12 @@ export default function Home() {
                   "https://github.com/AlhikamWarsawa"
                 </a>
               </p>
+              <div className="mt-4">
+                <iframe src="https://github.com/sponsors/AlhikamWarsawa/card"
+                        title="Sponsor AlhikamWarsawa"
+                        height="225" width="600" style={{border: 0}}>
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
