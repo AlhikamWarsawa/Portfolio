@@ -73,6 +73,8 @@ Currently Learning:
   - Languages: Python, Rust, C
   - Other: Trigonometry, Rust, Laravel, Docker
 Volunteering since 2024, working as Technical Writer Write articles about web development on Medium. Focus on website development topics. Make simple tutorials for beginners and learn to optimize websites. Actively interact with the developer community and learn from their feedback.
+
+** Process exited - Return Code: 0 **
 `;
 
         setOutput(profileOutput);
@@ -213,7 +215,9 @@ function Certification({closeCertification}) {
    Credential ID   : 002/DKN-SERKOM/VI/2024
    Nilai Akhir     : 92 (Sangat Kompeten)
 
-===========================================================`;
+===========================================================
+
+** Process exited - Return Code: 0 **`;
 
         setOutput(certOutput);
     };
@@ -320,7 +324,7 @@ function HelloWorld({closeHelloWorld}) {
     const [output, setOutput] = useState("");
 
     const runCode = () => {
-        setOutput("Selamat datang di portofolio saya! Di sini, Anda akan menemukan proyek, keterampilan, dan pencapaian saya. Terima kasih telah berkunjung, dan semoga menikmati!");
+        setOutput("Selamat datang di portofolio saya! Di sini, Anda akan menemukan proyek, keterampilan, dan pencapaian saya. Terima kasih telah berkunjung, dan semoga menikmati! \n\n ** Process exited - Return Code: 0 **");
     };
 
     return (
