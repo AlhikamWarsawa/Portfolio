@@ -38,6 +38,20 @@ export default function ContactMe() {
     message: "",
     email: "",
   });
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(`def running() -> None:
+  message: list = [
+    name: str =  "John Doe",
+    email: str = "johndoe@gmail.com",
+    message: str = "Hey!",
+    date = "${d.getDate()} ${month[d.getMonth()]} ${d.getFullYear()}"
+  ]
+
+running()`);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3000); // Reset setelah 3 detik
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -164,10 +178,10 @@ export default function ContactMe() {
                         language={`python`}
                         text={`def running() -> None:
   message: list = [
-	  name: str =  "John Doe",
-	  email: str = "johndoe@gmail.com",
-	  message: str = "Hey!",
-	  date = "${d.getDate()} ${month[d.getMonth()]} ${d.getFullYear()}"
+    name: str =  "John Doe",
+    email: str = "johndoe@gmail.com",
+    message: str = "Hey!",
+    date = "${d.getDate()} ${month[d.getMonth()]} ${d.getFullYear()}"
   ]
 
 running()`}
@@ -175,6 +189,8 @@ running()`}
                         theme={atomOneDark}
                         wrapLines={true}
                         codeBlock
+                        copied={isCopied}
+                        onCopy={handleCopy}
                     />
                   </div>
                 </div>
