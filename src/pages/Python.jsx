@@ -9,28 +9,34 @@ import {
     DIRECTIONS,
 } from "../components/snake/constants";
 
-const Python = ({ scoreSnake = () => {} }) => {
-    const canvasRef = useRef();
+const SnakeGame = ({ scoreSnake = () => {} }) => {
+    const canvasRef = useRef(null);
     const [snake, setSnake] = useState(SNAKE_START);
     const [apple, setApple] = useState(APPLE_START);
     const [dir, setDir] = useState([0, -1]);
     const [speed, setSpeed] = useState(null);
     const [gameOver, setGameOver] = useState(false);
-    const [hideStartBtn, setHideStartBtn] = useState(false);
 
     useInterval(() => gameLoop(), speed);
 
     const endGame = () => {
         setSpeed(null);
         setGameOver(true);
-        setHideStartBtn(false);
     };
 
-    const moveSnake = ({ keyCode }) =>
-        keyCode >= 37 && keyCode <= 40 && setDir(DIRECTIONS[keyCode]);
+    const moveSnake = (e) => {
+        const key = e.key.toLowerCase();
+        if (key === 'w' && dir[1] !== 1) setDir([0, -1]);
+        if (key === 's' && dir[1] !== -1) setDir([0, 1]);
+        if (key === 'a' && dir[0] !== 1) setDir([-1, 0]);
+        if (key === 'd' && dir[0] !== -1) setDir([1, 0]);
+        if (key === ' ' && (speed === null || gameOver)) startGame();
+    };
 
     const createApple = () =>
-        apple.map((_a, i) => Math.floor(Math.random() * (CANVAS_SIZE[i] / SCALE)));
+        apple.map(
+            (_a, i) => Math.floor(Math.random() * (CANVAS_SIZE[i] / SCALE))
+        );
 
     const checkCollision = (piece, snk = snake) => {
         if (
@@ -61,7 +67,10 @@ const Python = ({ scoreSnake = () => {} }) => {
 
     const gameLoop = () => {
         const snakeCopy = JSON.parse(JSON.stringify(snake));
-        const newSnakeHead = [snakeCopy[0][0] + dir[0], snakeCopy[0][1] + dir[1]];
+        const newSnakeHead = [
+            snakeCopy[0][0] + dir[0],
+            snakeCopy[0][1] + dir[1],
+        ];
         snakeCopy.unshift(newSnakeHead);
         if (checkCollision(newSnakeHead)) endGame();
         if (!checkAppleCollision(snakeCopy)) snakeCopy.pop();
@@ -74,53 +83,113 @@ const Python = ({ scoreSnake = () => {} }) => {
         setDir([0, -1]);
         setSpeed(SPEED);
         setGameOver(false);
-        setHideStartBtn(true);
     };
 
     useEffect(() => {
         const context = canvasRef.current.getContext("2d");
         context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
         context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
-        const gradient = context.createLinearGradient(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
-        gradient.addColorStop(0, "#3772a2");
-        gradient.addColorStop(1, "#ffd642");
-        context.fillStyle = gradient;
+
+        // Draw Snake
+        context.fillStyle = "#2ecc71"; // Green color
         snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
-        context.fillStyle = "#FEA55F";
+
+        // Draw Apple
+        context.fillStyle = "#e74c3c"; // Red color
         context.fillRect(apple[0], apple[1], 1, 1);
     }, [snake, apple, gameOver]);
 
+    // Handle key presses
+    useEffect(() => {
+        window.addEventListener("keydown", moveSnake);
+        return () => {
+            window.removeEventListener("keydown", moveSnake);
+        };
+    });
+
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-[#011627]">
-            <h2 className="text-2xl text-[#43D9AD] mb-4">Khodam Python</h2>
-            <div
-                tabIndex="0"
-                onKeyDown={(e) => moveSnake(e)}
-                className="relative focus:outline-none"
-            >
+        <div style={styles.container}>
+            <h2 style={styles.title}>Khodam Python</h2>
+            <div style={styles.gameContainer} tabIndex="0">
                 <canvas
-                    className="bg-[#010C15] border-2 border-[#1E2D3D] rounded-lg"
+                    style={styles.canvas}
                     ref={canvasRef}
                     width={`${CANVAS_SIZE[0]}px`}
                     height={`${CANVAS_SIZE[1]}px`}
                 />
                 {gameOver && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-[#43D9AD] text-2xl">
-                        GAME OVE!
+                    <div style={styles.gameOverOverlay}>
+                        <div style={styles.gameOverText}>
+                            Big L!
+                        </div>
                     </div>
                 )}
-                {!hideStartBtn && (
-                    <button
-                        onClick={startGame}
-                        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#FEA55F] text-[#011627] py-2 px-4 rounded-lg hover:bg-[#FEA55F]/80 transition-all"
-                    >
-                        Start Coding
-                    </button>
+                {!speed && !gameOver && (
+                    <div style={styles.startMessage}>
+                        Press <strong>Spacebar</strong> to Start
+                    </div>
                 )}
             </div>
-            <p className="mt-4 text-[#43D9AD]">Error: {snake.length - 2}</p>
+            <p style={styles.score}>Score: {snake.length - 2}</p>
         </div>
     );
 };
 
-export default Python;
+const styles = {
+    container: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        backgroundColor: "#011627",
+        color: "#43D9AD",
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    },
+    title: {
+        fontSize: "2rem",
+        marginBottom: "20px",
+    },
+    gameContainer: {
+        position: "relative",
+        outline: "none",
+    },
+    canvas: {
+        backgroundColor: "#010C15",
+        border: "2px solid #1E2D3D",
+        borderRadius: "10px",
+    },
+    gameOverOverlay: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#43D9AD",
+        fontSize: "2rem",
+        textAlign: "center",
+        borderRadius: "10px",
+    },
+    gameOverText: {
+        lineHeight: "1.5",
+    },
+    startMessage: {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        color: "#43D9AD",
+        fontSize: "1.5rem",
+        textAlign: "center",
+    },
+    score: {
+        marginTop: "20px",
+        fontSize: "1.2rem",
+    },
+};
+
+export default SnakeGame;
