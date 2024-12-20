@@ -214,6 +214,12 @@ function Certification({closeCertification}) {
    Issued          : Jun 2024
    Credential ID   : 002/DKN-SERKOM/VI/2024
    Nilai Akhir     : 92 (Sangat Kompeten)
+   
+3. Membangun Website Library Management dengan Framework Laravel
+   Issued by       : Kreasi Media
+   Issued          : Dec 2024
+   Credential ID   : -
+   Nilai Akhir     : 90 (Kompeten)
 
 ===========================================================
 
@@ -302,6 +308,14 @@ int main() {
     printf("   Issued          : Jun 2024\\n");
     printf("   Credential ID   : 002/DKN-SERKOM/VI/2024\\n");
     printf("   Nilai Akhir     : 92 (Sangat Kompeten)\\n\\n");
+    
+    /* 3. Membangun Website Library Management dengan Framework Laravel */
+    printf("3. Membangun Website Library Management dengan Framework Laravel\\n");
+    printf("   Issued by       : Kreasi Media\\n");
+    printf("   Issued          : Dec 2024\\n");
+    printf("   Credential ID   : -\\n");
+    printf("   Nilai Akhir     : 90 (Kompeten)\\n\\n");
+
 
     printf("===========================================================\\n");
 
