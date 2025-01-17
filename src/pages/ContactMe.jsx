@@ -12,6 +12,7 @@ import { FaStackOverflow } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaMedium } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { SiGooglecloud } from "react-icons/si";
 
 export default function ContactMe() {
   const d = new Date();
@@ -294,7 +295,16 @@ function Contacts() {
                   rel="noreferrer"
               >
                 <FaGoogle/>
-                <span>GoogleDevelopers</span>
+                <span>Google_Developers</span>
+              </a>
+              <a
+                  href="https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2"
+                  className="text-[#607B96] hover:text-white inline-flex items-center gap-2.5 transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <SiGooglecloud/>
+                <span>GCSB</span>
               </a>
             </Popover.Panel>
           </Transition>
