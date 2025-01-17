@@ -295,7 +295,7 @@ function Contacts() {
                   rel="noreferrer"
               >
                 <FaGoogle/>
-                <span>Google_Developers</span>
+                <span>GDevelopers</span>
               </a>
               <a
                   href="https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2"
