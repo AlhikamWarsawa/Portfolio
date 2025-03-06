@@ -6,5 +6,13 @@
     "visibleProject": "Public",
     "image": "../projects/sertikom3.png",
     "link": "https://github.com/AlhikamWarsawa/Sertikom3"
+  },
+  {
+    "title": "Magic-Ball",
+    "description": "Jawaban Acak Untuk Membantu Pengguna Membuat Keputusan",
+    "technology": "Swift",
+    "visibleProject": "Public",
+    "image": "../projects/magicBall.png",
+    "link": "https://github.com/AlhikamWarsawa/Magic-Ball"
   }
 ]

@@ -9,7 +9,7 @@ import { SiAssemblyscript } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/ProjectData.json";
-import { SiLaravel } from "react-icons/si";
+import { SiLaravel, SiSwift } from "react-icons/si";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");
@@ -68,6 +68,17 @@ export default function Projects() {
                 >
                   <SiLaravel />
                   <span>Laravel</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "Swift" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("Swift")}
+                >
+                  <SiSwift />
+                  <span>Swift</span>
                 </button>
               </div>
               {/*<div className="flex items-center gap-6">*/}
@@ -155,8 +166,8 @@ const Card = ({ data }) => {
     if (value.includes("Laravel")) {
       return <SiLaravel />;
     }
-    if (value.includes("C")) {
-      return <SiC />;
+    if (value.includes("Swift")) {
+      return <SiSwift />;
     }
     if (value.includes("Assembly")) {
       return <SiAssemblyscript />;
