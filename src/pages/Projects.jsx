@@ -3,7 +3,7 @@ import { BsFiles } from "@react-icons/all-files/bs/BsFiles";
 import { GoTriangleDown } from "@react-icons/all-files/go/GoTriangleDown";
 import { SiPython } from "@react-icons/all-files/si/SiPython";
 import { SiC } from "@react-icons/all-files/si/SiC";
-import { SiZig } from "react-icons/si";
+import {SiReact, SiZig} from "react-icons/si";
 import { FaCrown } from "react-icons/fa";
 import { SiAssemblyscript } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -79,6 +79,17 @@ export default function Projects() {
                 >
                   <SiSwift />
                   <span>Swift</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "ReactNative" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("ReactNative")}
+                >
+                  <SiReact />
+                  <span>React Native</span>
                 </button>
               </div>
               {/*<div className="flex items-center gap-6">*/}
@@ -169,8 +180,8 @@ const Card = ({ data }) => {
     if (value.includes("Swift")) {
       return <SiSwift />;
     }
-    if (value.includes("Assembly")) {
-      return <SiAssemblyscript />;
+    if (value.includes("ReactNative")) {
+      return <SiReact />;
     }
     if (value.includes("Zig")) {
       return <SiZig />;

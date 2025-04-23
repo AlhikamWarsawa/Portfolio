@@ -14,5 +14,21 @@
     "visibleProject": "Public",
     "image": "../projects/magicBall.png",
     "link": "https://github.com/AlhikamWarsawa/Magic-Ball"
+  },
+  {
+    "title": "Techxperience",
+    "description" : "Mobile Project Sederhana",
+    "technology" : "ReactNative",
+    "visibleProject" : "Public",
+    "image" : "../projects/techxperiences.png",
+    "link" : "https://github.com/AlhikamWarsawa/Techxperience"
+  },
+  {
+    "title" : "Todolist",
+    "description" : "Todolist Sederhana untuk Tugas Sederhana",
+    "technology" : "ReactNative",
+    "visibleProject" : "Public",
+    "image" : "../projects/todolist.png",
+    "Link" : "https://github.com/AlhikamWarsawa/React-Native/tree/main/tugasku"
   }
 ]
