@@ -66,12 +66,11 @@ function MyBio({closeBio}) {
 
     const runCode = () => {
         const profileOutput = `Hello, my name is Alhikam Dirga Ramadhan
-Class: XI-RPL1
 Hobby: Coding, Ngoding, Nunggu Weekend
-Languages Known: Rust, C, Python, JavaScript, PHP, SQL
+Languages Known: Python, Go, JavaScript
 Currently Learning:
-  - Languages: Python, Rust, C
-  - Other: Trigonometry, Rust, Laravel, Docker
+  - Languages: Python, Go, JavaScript
+  - Other: Google Cloud, Calculus
 Volunteering since 2024, working as Technical Writer Write articles about web development on Medium. Focus on website development topics. Make simple tutorials for beginners and learn to optimize websites. Actively interact with the developer community and learn from their feedback.
 
 ** Process exited - Return Code: 0 **
@@ -120,7 +119,6 @@ Volunteering since 2024, working as Technical Writer Write articles about web de
                     {`class Profile:
     def __init__(self, name, class_name, hobby, languages, currently_learning):
         self.name = name
-        self.class_name = class_name
         self.hobby = hobby
         self.languages = languages
         self.currently_learning = currently_learning
@@ -140,12 +138,11 @@ class Volunteering:
 # Creating a profile instance
 profile = Profile(
     name="Alhikam Dirga Ramadhan",
-    class_name="XI-RPL1",
     hobby=["Coding", "Ngoding", "Nunggu Weekend"],
-    languages=["Rust", "C", "Python", "JavaScript", "PHP", "SQL"],
+    languages=["Python", "Go", "JavaScript"],
     currently_learning={
-        "Languages": ["Python", "Rust", "C"],
-        "Other": ["Trigonometry", "Rust", "Laravel", "Docker"]
+        "Languages": ["Python", "Go", "JavaScript"],
+        "Other": ["Google Cloud", "Calculus"]
     },
 )
 
@@ -154,7 +151,6 @@ medium_volunteers = Volunteering("Technical Writer")
 
 # Printing profile details
 print(f"Hello, my name is {profile.name.capitalize()}")
-print(f"Class: {profile.class_name}")
 print("Hobby:", ", ".join(profile.hobby))
 print("Languages Known:", ", ".join(profile.languages))
 print("Currently Learning:")
