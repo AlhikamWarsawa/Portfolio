@@ -2,14 +2,11 @@ import { Dialog, Transition } from "@headlessui/react";
 import { BsFiles } from "@react-icons/all-files/bs/BsFiles";
 import { GoTriangleDown } from "@react-icons/all-files/go/GoTriangleDown";
 import { SiPython } from "@react-icons/all-files/si/SiPython";
-import { SiC } from "@react-icons/all-files/si/SiC";
-import {SiReact, SiZig} from "react-icons/si";
-import { FaCrown } from "react-icons/fa";
-import { SiAssemblyscript } from "react-icons/si";
+import {SiCplusplus, SiGo, SiJavascript, SiPhp, SiTypescript, SiSwift} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/ProjectData.json";
-import { SiLaravel, SiSwift } from "react-icons/si";
+import {SiJava} from "@react-icons/all-files/si/SiJava";
 
 
 export default function Projects() {
@@ -63,12 +60,78 @@ export default function Projects() {
               <div className="flex items-center gap-6 ">
                 <button
                     className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Laravel" ? "text-white" : "text-[#607B96]"
+                        filter === "Python" ? "text-white" : "text-[#607B96]"
                     }`}
-                    onClick={() => setFilter("Laravel")}
+                    onClick={() => setFilter("Python")}
                 >
-                  <SiLaravel />
-                  <span>Laravel</span>
+                  <SiPython />
+                  <span>Python</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "CPP" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("CPP")}
+                >
+                  <SiCplusplus />
+                  <span>C++</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "Java" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("Java")}
+                >
+                  <SiJava />
+                  <span>Java</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "Go" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("Go")}
+                >
+                  <SiGo />
+                  <span>Go</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "JS" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("JS")}
+                >
+                  <SiJavascript />
+                  <span>JavaScript</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "TS" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("TS")}
+                >
+                  <SiTypescript />
+                  <span>TypeScript</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-6 ">
+                <button
+                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                        filter === "PHP" ? "text-white" : "text-[#607B96]"
+                    }`}
+                    onClick={() => setFilter("PHP")}
+                >
+                  <SiPhp />
+                  <span>PHP</span>
                 </button>
               </div>
               <div className="flex items-center gap-6 ">
@@ -82,30 +145,6 @@ export default function Projects() {
                   <span>Swift</span>
                 </button>
               </div>
-              <div className="flex items-center gap-6 ">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "ReactNative" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("ReactNative")}
-                >
-                  <SiReact />
-                  <span>React Native</span>
-                </button>
-              </div>
-              <div className="flex items-center gap-6 ">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "Python" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("Python")}
-                >
-                  <SiPython />
-                  <span>Python</span>
-                </button>
-              </div>
-
-
             </Transition>
           </div>
 
@@ -143,17 +182,29 @@ const Card = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function generateIcon(value) {
-    if (value.includes("Laravel")) {
-      return <SiLaravel />;
+    if (value.includes("Python")) {
+      return <SiPython />;
+    }
+    if (value.includes("CPP")) {
+      return <SiCplusplus />;
+    }
+    if (value.includes("Java")) {
+      return <SiJava />;
+    }
+    if (value.includes("Go")) {
+      return <SiGo />;
+    }
+    if (value.includes("JS")) {
+      return <SiJavascript />;
+    }
+    if (value.includes("TS")) {
+      return <SiTypescript />;
+    }
+    if (value.includes("PHP")) {
+      return <SiPhp />;
     }
     if (value.includes("Swift")) {
       return <SiSwift />;
-    }
-    if (value.includes("ReactNative")) {
-      return <SiReact />;
-    }
-    if (value.includes("Python")) {
-      return <SiPython />;
     }
   }
 

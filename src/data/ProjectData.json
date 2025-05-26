@@ -2,7 +2,7 @@
   {
     "title": "Management Library",
     "description": "Uji Sertifikasi Management Library",
-    "technology": "Laravel",
+    "technology": "PHP",
     "visibleProject": "Public",
     "image": "../projects/sertikom3.png",
     "link": "https://github.com/AlhikamWarsawa/Sertikom3"
@@ -18,7 +18,7 @@
   {
     "title": "Techxperience",
     "description" : "Mobile Project Sederhana",
-    "technology" : "ReactNative",
+    "technology" : "TS",
     "visibleProject" : "Public",
     "image" : "../projects/techxperiences.png",
     "link" : "https://github.com/AlhikamWarsawa/Techxperience"
@@ -26,7 +26,7 @@
   {
     "title" : "Todolist",
     "description" : "Todolist Sederhana untuk Tugas Sederhana",
-    "technology" : "ReactNative",
+    "technology" : "TS",
     "visibleProject" : "Public",
     "image" : "../projects/todolist.png",
     "Link" : "https://github.com/AlhikamWarsawa/React-Native/tree/main/tugasku"
