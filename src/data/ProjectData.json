@@ -30,5 +30,13 @@
     "visibleProject" : "Public",
     "image" : "../projects/todolist.png",
     "Link" : "https://github.com/AlhikamWarsawa/React-Native/tree/main/tugasku"
+  },
+  {
+    "title" : "LifeHubs",
+    "description" : "Zona Kendali Hidup",
+    "technology" : "Go",
+    "visibleProject" : "Private",
+    "image" : "../projects/sertikom4.png",
+    "Link" : "https://github.com/AlhikamWarsawa/Lifehubs/tree/main"
   }
 ]
