@@ -24,14 +24,6 @@
     "link" : "https://github.com/AlhikamWarsawa/Techxperience"
   },
   {
-    "title" : "Todolist",
-    "description" : "Todolist Sederhana untuk Tugas Sederhana",
-    "technology" : "TS",
-    "visibleProject" : "Public",
-    "image" : "../projects/todolist.png",
-    "Link" : "https://github.com/AlhikamWarsawa/React-Native/tree/main/tugasku"
-  },
-  {
     "title" : "LifeHubs",
     "description" : "Zona Kendali Hidup",
     "technology" : "Go",
