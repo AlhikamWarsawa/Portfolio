@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { BsFiles } from "@react-icons/all-files/bs/BsFiles";
 import { GoTriangleDown } from "@react-icons/all-files/go/GoTriangleDown";
 import { SiPython } from "@react-icons/all-files/si/SiPython";
-import {SiCplusplus, SiGo, SiJavascript, SiPhp, SiTypescript, SiSwift} from "react-icons/si";
+import {SiCplusplus, SiGo, SiJavascript, SiTypescript, SiSwift} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/ProjectData.json";
@@ -126,17 +126,6 @@ export default function Projects() {
               <div className="flex items-center gap-6 ">
                 <button
                     className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
-                        filter === "PHP" ? "text-white" : "text-[#607B96]"
-                    }`}
-                    onClick={() => setFilter("PHP")}
-                >
-                  <SiPhp />
-                  <span>PHP</span>
-                </button>
-              </div>
-              <div className="flex items-center gap-6 ">
-                <button
-                    className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
                         filter === "Swift" ? "text-white" : "text-[#607B96]"
                     }`}
                     onClick={() => setFilter("Swift")}
@@ -199,9 +188,6 @@ const Card = ({ data }) => {
     }
     if (value.includes("TS")) {
       return <SiTypescript />;
-    }
-    if (value.includes("PHP")) {
-      return <SiPhp />;
     }
     if (value.includes("Swift")) {
       return <SiSwift />;

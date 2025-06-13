@@ -1,13 +1,5 @@
 [
   {
-    "title": "Management Library",
-    "description": "Uji Sertifikasi Management Library",
-    "technology": "PHP",
-    "visibleProject": "Public",
-    "image": "../projects/sertikom3.png",
-    "link": "https://github.com/AlhikamWarsawa/Sertikom3"
-  },
-  {
     "title": "Magic-Ball",
     "description": "Jawaban Acak Untuk Membantu Pengguna Membuat Keputusan",
     "technology": "Swift",
