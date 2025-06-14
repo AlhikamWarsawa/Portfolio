@@ -9,7 +9,6 @@ import {useState} from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {atomOneDark} from "react-syntax-highlighter/dist/esm/styles/hljs";
 import {IoLogoPython} from "@react-icons/all-files/io5/IoLogoPython";
-import {SiC} from "react-icons/si";
 import {FaPlay} from "react-icons/fa";
 import {SiAssemblyscript} from "react-icons/si";
 
@@ -23,8 +22,6 @@ export default function AboutMe() {
             return <MyBio closeBio={setRender}/>;
         } else if (value === "hello-world") {
             return <HelloWorld closeHelloWorld={setRender}/>;
-        } else if (value === "certifications") {
-            return <Certification closeCertification={setRender}/>;
         }
     }
 
@@ -71,7 +68,6 @@ Languages Known: Python, Go, JavaScript
 Currently Learning:
   - Languages: Python, Go, JavaScript
   - Other: Google Cloud, Calculus
-Volunteering since 2024, working as Technical Writer Write articles about web development on Medium. Focus on website development topics. Make simple tutorials for beginners and learn to optimize websites. Actively interact with the developer community and learn from their feedback.
 
 ** Process exited - Return Code: 0 **
 `;
@@ -123,18 +119,6 @@ Volunteering since 2024, working as Technical Writer Write articles about web de
         self.languages = languages
         self.currently_learning = currently_learning
 
-
-class Volunteering:
-    def __init__(self, role: str) -> None:
-        self.role = role
-
-    def medium(self, start_year: int) -> str:
-        return (f"Volunteering since {start_year}, working as {self.role} "
-                "Write articles about web development on Medium. Focus on website development topics. "
-                "Make simple tutorials for beginners and learn to optimize websites. "
-                "Actively interact with the developer community and learn from their feedback.")
-
-
 # Creating a profile instance
 profile = Profile(
     name="Alhikam Dirga Ramadhan",
@@ -146,9 +130,6 @@ profile = Profile(
     },
 )
 
-# Volunteering experience
-medium_volunteers = Volunteering("Technical Writer")
-
 # Printing profile details
 print(f"Hello, my name is {profile.name.capitalize()}")
 print("Hobby:", ", ".join(profile.hobby))
@@ -157,166 +138,6 @@ print("Currently Learning:")
 print("  - Languages:", ", ".join(profile.currently_learning["Languages"]))
 print("  - Other:", ", ".join(profile.currently_learning["Other"]))
 
-# Volunteering details
-print(medium_volunteers.medium(2024))
-`}
-                </SyntaxHighlighter>
-                {output && (
-                    <div className="bg-gray-900 p-4 border-t border-[#101419]">
-                        <h3 className="text-white font-bold mb-2">Output:</h3>
-                        <pre className="text-white whitespace-pre-wrap">{output}</pre>
-                    </div>
-                )}
-            </div>
-        </motion.div>
-    );
-}
-
-function Certification({closeCertification}) {
-    const [output, setOutput] = useState("");
-
-    const runCode = () => {
-        const certOutput = `===========================================================
-                  Licenses & Certifications                
-===========================================================
-
-1. Git: Pemula sampai Mahir
-   Issued by       : Udemy
-   Issued          : Jan 2024
-   Credential ID   : UC-1139d7a2-56fc-4394-8ac0-daa1b0eb72fe
-
-2. Belajar Dasar AI
-   Issued by       : Dicoding Indonesia
-   Issued          : Jun 2024  |  Expires: Jun 2027
-   Credential ID   : 4EXGQ7WEDZRL
-
-3. Google Play Store Listing Certificate
-   Issued by       : Google Play
-   Issued          : Sep 2024  |  Expires: Sep 2027
-   Credential ID   : 114714033
-
-===========================================================
-                    Certificate of Competency              
-===========================================================
-
-1. Membuat Landing Page Dengan HTML dan CSS
-   Issued by       : PT. WAN Teknologi Internasional
-   Issued          : Dec 2023
-   Credential ID   : 030/WTI/SERTIKOM/23
-   Nilai Akhir     : 99 (Kompeten)
-
-2. Membuat Aplikasi Pemesanan Hotel Berbasis Web
-   Issued by       : PT Dimensi Kreasi Nusantara
-   Issued          : Jun 2024
-   Credential ID   : 002/DKN-SERKOM/VI/2024
-   Nilai Akhir     : 92 (Sangat Kompeten)
-   
-3. Membangun Website Library Management dengan Framework Laravel
-   Issued by       : Kreasi Media
-   Issued          : Dec 2024
-   Credential ID   : -
-   Nilai Akhir     : 90 (Kompeten)
-
-===========================================================
-
-** Process exited - Return Code: 0 **`;
-
-        setOutput(certOutput);
-    };
-
-    return (
-        <motion.div
-            className="col-span-10 h-full flex justify-center overflow-hidden flex-col"
-            initial={{x: -50, opacity: 0}}
-            animate={{x: 0, opacity: 1}}
-            exit={{x: 50, opacity: 0}}
-        >
-            <div className="w-full">
-                <div className="grid grid-cols-12 border-b border-[#101419]">
-                    <div
-                        className="lg:col-span-2 md:col-span-6 col-span-12 text-white border-r border-[#101419] py-2.5 relative px-4">
-                        <button
-                            className="absolute top-1/2 -translate-y-1/2 right-4"
-                            onClick={() => {
-                                closeCertification("/");
-                            }}
-                        >
-                            <AiOutlineClose/>
-                        </button>
-                        <p className="pr-5 truncate">certs.c</p>
-                    </div>
-                    <div className="lg:col-span-10 md:col-span-6 col-span-12 flex justify-end items-center pr-4">
-                        <button
-                            className="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded flex items-center"
-                            onClick={runCode}
-                        >
-                            <FaPlay className="mr-2"/> Run
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div className="overflow-y-auto scrollbar-thin h-full flex flex-col">
-                <SyntaxHighlighter
-                    language="c"
-                    style={atomOneDark}
-                    showLineNumbers
-                    className="flex-grow"
-                >
-                    {`#include <stdio.h>
-
-int main() {
-    printf("===========================================================\\n");
-    printf("                  Licenses & Certifications                \\n");
-    printf("===========================================================\\n\\n");
-
-    /* 1. Git: Pemula sampai Mahir */
-    printf("1. Git: Pemula sampai Mahir\\n");
-    printf("   Issued by       : Udemy\\n");
-    printf("   Issued          : Jan 2024\\n");
-    printf("   Credential ID   : UC-1139d7a2-56fc-4394-8ac0-daa1b0eb72fe\\n\\n");
-
-    /* 2. Belajar Dasar AI */
-    printf("2. Belajar Dasar AI\\n");
-    printf("   Issued by       : Dicoding Indonesia\\n");
-    printf("   Issued          : Jun 2024  |  Expires: Jun 2027\\n");
-    printf("   Credential ID   : 4EXGQ7WEDZRL\\n\\n");
-
-    /* 3. Google Play Store Listing Certificate */
-    printf("3. Google Play Store Listing Certificate\\n");
-    printf("   Issued by       : Google Play\\n");
-    printf("   Issued          : Sep 2024  |  Expires: Sep 2027\\n");
-    printf("   Credential ID   : 114714033\\n\\n");
-
-    printf("===========================================================\\n");
-    printf("                    Certificate of Competency              \\n");
-    printf("===========================================================\\n\\n");
-
-    /* 1. Membuat Landing Page Dengan HTML dan CSS */
-    printf("1. Membuat Landing Page Dengan HTML dan CSS\\n");
-    printf("   Issued by       : PT. WAN Teknologi Internasional\\n");
-    printf("   Issued          : Dec 2023\\n");
-    printf("   Credential ID   : 030/WTI/SERTIKOM/23\\n");
-    printf("   Nilai Akhir     : 99 (Kompeten)\\n\\n");
-
-    /* 2. Membuat Aplikasi Pemesanan Hotel Berbasis Web */
-    printf("2. Membuat Aplikasi Pemesanan Hotel Berbasis Web\\n");
-    printf("   Issued by       : PT Dimensi Kreasi Nusantara\\n");
-    printf("   Issued          : Jun 2024\\n");
-    printf("   Credential ID   : 002/DKN-SERKOM/VI/2024\\n");
-    printf("   Nilai Akhir     : 92 (Sangat Kompeten)\\n\\n");
-    
-    /* 3. Membangun Website Library Management dengan Framework Laravel */
-    printf("3. Membangun Website Library Management dengan Framework Laravel\\n");
-    printf("   Issued by       : Kreasi Media\\n");
-    printf("   Issued          : Dec 2024\\n");
-    printf("   Credential ID   : -\\n");
-    printf("   Nilai Akhir     : 90 (Kompeten)\\n\\n");
-
-
-    printf("===========================================================\\n");
-
-    return 0;
-}
 `}
                 </SyntaxHighlighter>
                 {output && (
@@ -494,15 +315,6 @@ function PersonalInfo({setRender, render}) {
                                         >
                                             <IoLogoPython/>
                                             <span className="truncate">personal.py</span>
-                                        </Popover.Panel>
-                                        <Popover.Panel
-                                            className={`px-4 my-1 ml-2.5 inline-flex items-center gap-2.5 transition-colors ${render === "certifications" ? "text-white" : "text-[#607B96]"
-                                            }`}
-                                            as="button"
-                                            onClick={() => setRender("certifications")}
-                                        >
-                                            <SiC/>
-                                            <span className="truncate">certs.c</span>
                                         </Popover.Panel>
                                         <Popover.Panel
                                             className={`px-4 my-1 ml-2.5 inline-flex items-center gap-2.5 transition-colors ${render === "hello-world" ? "text-white" : "text-[#607B96]"

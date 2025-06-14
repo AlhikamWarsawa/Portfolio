@@ -109,7 +109,7 @@ const SnakeGame = ({ scoreSnake = () => {} }) => {
 
     return (
         <div style={styles.container}>
-            <h2 style={styles.title}>Khodam Python</h2>
+            <h2 style={styles.title}>Python</h2>
             <div style={styles.gameContainer} tabIndex="0">
                 <canvas
                     style={styles.canvas}
@@ -120,7 +120,7 @@ const SnakeGame = ({ scoreSnake = () => {} }) => {
                 {gameOver && (
                     <div style={styles.gameOverOverlay}>
                         <div style={styles.gameOverText}>
-                            Big L!
+                            GAME OVER
                         </div>
                     </div>
                 )}

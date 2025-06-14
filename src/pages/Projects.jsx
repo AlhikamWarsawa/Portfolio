@@ -54,7 +54,7 @@ export default function Projects() {
                     onClick={() => setFilter("all")}
                 >
                   <BsFiles />
-                  <span>All Projects</span>
+                  <span>All</span>
                 </button>
               </div>
               <div className="flex items-center gap-6 ">

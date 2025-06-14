@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Google I/O 2025 Puzzle Winner",
+    "category": "Event",
+    "provider": "Google",
+    "image": "../certificates/io25.svg",
+    "link": "https://developers.google.com/profile/u/aldra?hl=id"
+  },
+  {
+    "name": "I/O 2024 - Registered",
+    "category": "Event",
+    "provider": "Google",
+    "image": "../certificates/io24.svg",
+    "link": "https://developers.google.com/profile/u/aldra?hl=id"
+  },
+  {
+    "name": "I/O 2025 - Registered",
+    "category": "Event",
+    "provider": "Google",
+    "image": "../certificates/gio25.svg",
+    "link": "https://developers.google.com/profile/u/aldra?hl=id"
+  },
+  {
+    "name": "Building apps for the future with Gemini API",
+    "category": "AI",
+    "provider": "Google",
+    "image": "../certificates/gemini.svg",
+    "link": "https://developers.google.com/profile/u/aldra?hl=id"
+  },
+  {
+    "name": "Git Pemula sampai Mahir",
+    "category": "DevOps",
+    "provider": "Udemy",
+    "image": "../certificates/git.png",
+    "link": "https://drive.google.com/file/d/1h0xecWY-eLZMELcxrNYY2bS03pPrXYeU/view"
+  },
+  {
+    "name": "Belajar Dasar AI",
+    "category": "AI",
+    "provider": "Dicoding",
+    "image": "../certificates/dicoding.png",
+    "link": "https://www.dicoding.com/certificates/4EXGQ7WEDZRL"
+  },
+  {
+    "name": "Google Play Store Listing Certificate",
+    "category": "Mobile",
+    "provider": "Google Play Academy",
+    "image": "../certificates/googleplay.png",
+    "link": "https://www.credential.net/9a2a562d-7f3c-4b1c-aee7-fcc764e969fd#acc.KaTBYr9t"
+  },
+  {
+    "name": "Certificate of Achievement - The LLM Course",
+    "category": "AI",
+    "provider": "HuggingFace",
+    "image": "../certificates/hugging.webp",
+    "link": "https://huggingface.co/spaces/huggingface-course/chapter_1_exam/discussions/20"
+  },
+  {
+    "name": "The Arcade Trivia January 2025 Week 1",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/arcadejanweek1.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13600902"
+  },
+  {
+    "name": "The Arcade Trivia January 2025 Week 2",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/arcadejanweek2.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13612151"
+  },
+  {
+    "name": "The Arcade Base Camp January 2025",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/basecamp.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13612457"
+  },
+  {
+    "name": "The Arcade Certification Zone January 2025",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/arcadecertzone.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13624584"
+  },
+  {
+    "name": "The Arcade Trivia January 2025 Week 3",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/arcardejanweek3.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13665122"
+  },
+  {
+    "name": "Prompt Design in Vertex AI",
+    "category": "AI",
+    "provider": "Google Cloud",
+    "image": "../certificates/cloud1.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13877030"
+  },
+  {
+    "name": "The Basics of Google Cloud Compute",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/cloud2.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13879854"
+  },
+  {
+    "name": "Get Started with Sensitive Data Protection",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/cloud3.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13880451"
+  },
+  {
+    "name": "Build Real World AI Applications with Gemini and Imagen",
+    "category": "AI",
+    "provider": "Google Cloud",
+    "image": "../certificates/cloud4.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13962288"
+  },
+  {
+    "name": "Workspace: Add-ons",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/cloud5.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/13985458"
+  }
+]

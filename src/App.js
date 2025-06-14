@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Projects from "./pages/Projects";
 import Python from './pages/Python';
+import Certificate from './pages/Certificate';
 
 export default function App() {
   const [isNavbar, setIsNavbar] = useState("/");
@@ -16,7 +17,9 @@ export default function App() {
     } else if (value === "about-me") {
       return <AboutMe />;
     } else if (value === "projects") {
-      return <Projects />;
+      return <Projects/>;
+    } else if (value === "certificate") {
+      return <Certificate />;
     } else if (value === "contact-me") {
       return <ContactMe />;
     } else if (value === "python") {
