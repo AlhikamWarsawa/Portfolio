@@ -1,7 +1,14 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { BsFiles } from "@react-icons/all-files/bs/BsFiles";
 import { GoTriangleDown } from "@react-icons/all-files/go/GoTriangleDown";
-import {SiTensorflow, SiGooglecloud, SiAndroid, SiGoogletagmanager, SiKubernetes, SiChromecast} from "react-icons/si";
+import {
+    SiTensorflow,
+    SiGooglecloud,
+    SiAndroid,
+    SiGoogletagmanager,
+    SiKubernetes,
+    SiGooglechrome
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/CertificateData.json";
@@ -106,7 +113,7 @@ export default function Certificate() {
                                 }`}
                                 onClick={() => setFilter("Web")}
                             >
-                                <SiChromecast />
+                                <SiGooglechrome />
                                 <span>Web</span>
                             </button>
                         </div>
@@ -171,7 +178,7 @@ const Card = ({ data }) => {
             return <SiAndroid />;
         }
         if (value.includes("Web")) {
-            return <SiChromecast />;
+            return <SiGooglechrome />;
         }
         if (value.includes("Event")) {
             return <SiGoogletagmanager />;
