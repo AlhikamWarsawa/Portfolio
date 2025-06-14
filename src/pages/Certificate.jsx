@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { BsFiles } from "@react-icons/all-files/bs/BsFiles";
 import { GoTriangleDown } from "@react-icons/all-files/go/GoTriangleDown";
-import {SiTensorflow, SiGooglecloud, SiAndroid, SiGoogletagmanager, SiKubernetes} from "react-icons/si";
+import {SiTensorflow, SiGooglecloud, SiAndroid, SiGoogletagmanager, SiKubernetes, SiChromecast} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Fragment, useState } from "react";
 import datas from "../data/CertificateData.json";
@@ -102,6 +102,17 @@ export default function Certificate() {
                         <div className="flex items-center gap-6 ">
                             <button
                                 className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
+                                    filter === "Web" ? "text-white" : "text-[#607B96]"
+                                }`}
+                                onClick={() => setFilter("Web")}
+                            >
+                                <SiChromecast />
+                                <span>Web</span>
+                            </button>
+                        </div>
+                        <div className="flex items-center gap-6 ">
+                            <button
+                                className={`flex items-center gap-2.5 cursor-pointer transition-colors hover:text-white w-full ${
                                     filter === "Event" ? "text-white" : "text-[#607B96]"
                                 }`}
                                 onClick={() => setFilter("Event")}
@@ -158,6 +169,9 @@ const Card = ({ data }) => {
         }
         if (value.includes("Mobile")) {
             return <SiAndroid />;
+        }
+        if (value.includes("Web")) {
+            return <SiChromecast />;
         }
         if (value.includes("Event")) {
             return <SiGoogletagmanager />;
