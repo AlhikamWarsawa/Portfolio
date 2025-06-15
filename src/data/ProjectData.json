@@ -16,11 +16,11 @@
     "link" : "https://github.com/AlhikamWarsawa/Techxperience"
   },
   {
-    "title" : "LifeHubs",
-    "description" : "Zona Kendali Hidup",
-    "technology" : "Go",
-    "visibleProject" : "Public",
-    "image" : "../projects/sertikom4.png",
-    "Link" : "https://github.com/AlhikamWarsawa/Lifehubs"
+    "title": "LifeHubs",
+    "description": "Dimana Semua tatanan kehidupan di atur disini",
+    "technology": "Go",
+    "visibleProject": "Public",
+    "image": "../projects/sertikom4.png",
+    "link": "https://github.com/AlhikamWarsawa/Lifehubs"
   }
 ]
