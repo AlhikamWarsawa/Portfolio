@@ -19,8 +19,8 @@
     "title" : "LifeHubs",
     "description" : "Zona Kendali Hidup",
     "technology" : "Go",
-    "visibleProject" : "Private",
+    "visibleProject" : "Public",
     "image" : "../projects/sertikom4.png",
-    "Link" : "https://github.com/AlhikamWarsawa/Lifehubs/tree/main"
+    "Link" : "https://github.com/AlhikamWarsawa/Lifehubs"
   }
 ]
