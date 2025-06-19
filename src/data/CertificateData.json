@@ -145,5 +145,19 @@
     "provider": "Google Cloud",
     "image": "../certificates/learnathon.png",
     "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16531108"
+  },
+  {
+    "name": "Skills Boost Arcade Trivia June 2025 Week 3",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/junweek3.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16559766"
+  },
+  {
+    "name": "Work Meets Play: House Hunting",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/househunting.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16571941"
   }
 ]
