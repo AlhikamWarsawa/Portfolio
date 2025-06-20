@@ -159,5 +159,12 @@
     "provider": "Google Cloud",
     "image": "../certificates/househunting.png",
     "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16571941"
+  },
+  {
+    "name": "Skills Boost Arcade Trivia June 2025 Week 4",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/junweek4.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16581106"
   }
 ]
