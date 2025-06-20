@@ -166,5 +166,12 @@
     "provider": "Google Cloud",
     "image": "../certificates/junweek4.png",
     "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16581106"
+  },
+  {
+    "name": "Skills Boost Arcade Certification Zone June 2025",
+    "category": "Cloud",
+    "provider": "Google Cloud",
+    "image": "../certificates/certzone.png",
+    "link": "https://www.cloudskillsboost.google/public_profiles/b5eb9fdc-0089-48bc-ab33-a83e6272f3f2/badges/16585415"
   }
 ]
